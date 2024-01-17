@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1">
+    <button onclick="Calculate()">Calculate</button>
+    <p id="p1"></p>
+    <script>
+        function Calculate(){
+            counter = 1;
+            var number = document.getElementById("in1").value;
+            while(counter <= number){
+
+                // Algorithm
+                Divider(counter);
+                // End Algorithm
+                counter++;
+            }
+        }
+
+        function Divider(number){
+            var counter = 1;
+            var numberOfDividers = 0;
+            var sum = 0;
+            while(counter < number){
+                if(number % counter == 0){
+                    sum += counter;
+                    numberOfDividers++;
+                }
+                counter++;
+            }
+            if(sum == number){
+                document.getElementById("p1").innerHTML += `${number} Is Perfect.<br>`;
+            }  
+            else{
+                // document.getElementById("p1").innerHTML += `${number} Is Not Perfect.<br>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        var x = 63;
+        var sum = 0;
+        while(x <= 98){
+            // document.getElementById("p1").innerHTML += x + "<br>";
+            if(x % 2 == 0){
+                sum += x;
+            }
+            x++;
+        }
+        document.getElementById("p1").innerHTML += sum + "<br>";
+
+    </script>
+</body>
+</html>

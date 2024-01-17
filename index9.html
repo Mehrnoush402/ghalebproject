@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1">
+    <button onclick="Calculate()">Calculate</button>
+    <p id="p1"></p>
+    <script>
+        function Calculate(){
+            var number = document.getElementById("in1").value;
+            var IsPrime = true;
+            for(var counter = 2;counter < number;counter++){
+                if(number % counter == 0){
+                    IsPrime = false;
+                    break;
+                }
+            }
+            if(IsPrime){
+                document.getElementById("p1").innerHTML = `${number} Is Prime.<br>`;
+            }  
+            else{
+                document.getElementById("p1").innerHTML = `${number} Is Not Prime.<br>`;
+            }
+        }
+    </script>
+</body>
+</html>

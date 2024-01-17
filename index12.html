@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="abc"><br>
+    <input type="text" value="abc"><br>
+    <input type="text" value="abc"><br>
+    <input type="text" value="abc"><br>
+    <input type="text" value="abc"><br>
+    <button onclick="Blue()">Blue</button>
+    <button onclick="Clear()">Clear</button>
+    <script>
+        function Blue(){
+            var inputs = document.querySelectorAll("input");
+            console.log(inputs);
+            for (let index = 0; index < inputs.length; index++) {
+                inputs[index].style.backgroundColor = "blue";
+            }
+        }
+        function Clear(){
+            var inputs = document.querySelectorAll("input");
+            console.log(inputs);
+            for (let index = 0; index < inputs.length; index++) {
+                inputs[index].value = "";
+            }
+        }
+    </script>
+</body>
+</html>

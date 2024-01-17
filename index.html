@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Male<input type="radio" id="rdb1" onclick="Check1(this.id)">
+    Female<input type="radio" id="rdb2" onclick="Check2()">
+    <script>
+        function Check1(){
+            var rdb1 = document.getElementById("rdb1").checked;
+            if(rdb1 == true){
+                document.getElementById("rdb2").checked = false;
+            }
+        }
+        function Check2(){
+            var rdb2 = document.getElementById("rdb2").checked;
+            if(rdb2 == true){
+                document.getElementById("rdb1").checked = false;
+            }
+        }
+    </script>
+</body>
+</html>
